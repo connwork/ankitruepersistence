@@ -38,7 +38,8 @@ def retrieve_local_storage():
     """
 
     def save_key_value_pairs(js_return):
-        if js_return == "None":
+        if js_return == """var key_value_pairs = 
+];""":
             return
         js_persistentlocalstorage = f"{js_return}\n{js_footer_code}"
         media_folder = mw.col.media.dir()
